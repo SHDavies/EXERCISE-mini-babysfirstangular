@@ -5,10 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<h1>My Friends</h1>
-<div ng-repeat="friend in friends">
-	<p> {{friend}} </p>
-</div>
+	<h1>My Friends</h1>
+	<input type="text" ng-model="friendInput" placeholder="Add a friend">
+	<button type="button" ng-click="addFriend()">Submit</button>
+	<div ng-model="friends" ng-repeat="friend in friends">
+		<p> {{friend}} </p>
+	</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 <script src="./js/app.js"></script>
